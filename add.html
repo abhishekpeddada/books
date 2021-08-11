@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lib Mng | Dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="assets/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link href="assets/css/easy-autocomplete.min.css" rel="stylesheet">
+    <link href="assets/css/backend.css" rel="stylesheet">
+
+    <style>[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid] {display: none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+        <link rel="stylesheet" href="assets/css/book_index.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-toggle.min.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link href="assets/css/summernote-bs4.css" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+<!-- Navbar -->
+
+<!-- /.navbar -->
+
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="https://library-management.com/dashboard" class="brand-link">
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="https://library-management.com/uploads/default.png"
+                     class="img-thumbnail border-0 p-0"
+                     alt="Admin">
+            </div>
+            <div class="info">
+                <a href="#" class="d-block">Admin</a>
+                                    <span class="badge badge-danger">Super Admin</span>
+                                                                                                </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column nav-flat nav-child-indent text-sm" data-widget="treeview"
+                role="menu"
+                data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+                     <li class="nav-item">
+                        <a href="dashboard.jsp"
+                           class="nav-link  active ">
+                            <p>
+                               dashboard
+                            </p>
+                        </a>
+                    </li>
+                <li class="nav-item">
+                    <a href="add.html"
+                       class="nav-link ">
+                        <p>
+                           Add books
+                        </p>
+                    </a>
+                </li>
+
+                                    <li class="nav-item">
+                        <a href="issue.html"
+                           class="nav-link ">
+                            
+                            <p>
+                               Issue books
+                            </p>
+                        </a>
+                    </li>
+                
+                
+                    <li class="nav-item has-treeview ">
+                        <a href="return.jsp" class="nav-link  ">
+                           
+                            <p>
+                                Return books
+
+                            </p>
+                        </a>
+                    </li>
+                   <li class="nav-item">
+                                <a href="students.jsp"
+                                   class="nav-link ">
+                                  
+                                    <p>Members</p>
+                                </a>
+                            </li>
+                        <li class="nav-item has-treeview ">
+                        <a href="login.html"
+                           class="nav-link ">
+                           
+                            <p>
+                                Logout
+                
+                            </p>
+                        </a></li>
+
+
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
+
+<!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="min-height: 311px;">
+        <!-- Content Header (Page header) -->
+ 
+        <section class="content">
+                        <div wire:id="Eslsj9zQwztG7TtIUYMG" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;Eslsj9zQwztG7TtIUYMG&quot;,&quot;name&quot;:&quot;book&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;books&quot;,&quot;method&quot;:&quot;GET&quot;},&quot;effects&quot;:{&quot;dispatches&quot;:[{&quot;event&quot;:&quot;toogle_refresh&quot;,&quot;data&quot;:null},{&quot;event&quot;:&quot;tooltip_refresh&quot;,&quot;data&quot;:null},{&quot;event&quot;:&quot;select_2_refresh&quot;,&quot;data&quot;:null},{&quot;event&quot;:&quot;relink_js&quot;,&quot;data&quot;:null}],&quot;listeners&quot;:[&quot;addSubBooksQnty&quot;,&quot;removeSubBooksQnty&quot;,&quot;data_manager&quot;,&quot;saveBook&quot;,&quot;checkIfSubBookIdExist&quot;,&quot;deleteSubBook&quot;],&quot;path&quot;:&quot;https:\/\/www.library-management.com\/books&quot;},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;a6041ca5&quot;,&quot;data&quot;:{&quot;book_id&quot;:null,&quot;isbn&quot;:null,&quot;isbn_10&quot;:null,&quot;isbn_13&quot;:null,&quot;author_name&quot;:&quot;N\/A&quot;,&quot;unique_id&quot;:null,&quot;title&quot;:null,&quot;category&quot;:&quot;Others&quot;,&quot;publisher&quot;:&quot;N\/A&quot;,&quot;preview_url&quot;:null,&quot;google_img&quot;:null,&quot;custom_img&quot;:null,&quot;cover_img&quot;:&quot;&quot;,&quot;desc&quot;:null,&quot;custom_file&quot;:null,&quot;mode&quot;:&quot;create&quot;,&quot;book_qnt&quot;:0,&quot;sub_books&quot;:null,&quot;calling_from&quot;:&quot;main_book&quot;,&quot;books_collections&quot;:[],&quot;books_existing_collections&quot;:[],&quot;submit_id&quot;:true,&quot;sel_cat&quot;:&quot;&quot;,&quot;sel_sub_cat&quot;:&quot;&quot;,&quot;sel_authors&quot;:[],&quot;sel_publishers&quot;:[],&quot;sel_tags&quot;:[],&quot;show_custom_img&quot;:&quot;https:\/\/via.placeholder.com\/120x120&quot;,&quot;todo&quot;:&quot;save&quot;,&quot;sub_cats&quot;:[],&quot;sel_sub_cats&quot;:&quot;&quot;,&quot;edit_id&quot;:null,&quot;via&quot;:&quot;google&quot;,&quot;authorData&quot;:{&quot;1&quot;:&quot;Prince&quot;,&quot;4&quot;:&quot;Harrry Potter&quot;,&quot;6&quot;:&quot;Mayank Bhushan&quot;,&quot;8&quot;:&quot;Alfreda Dudley&quot;,&quot;9&quot;:&quot;James Braman&quot;,&quot;10&quot;:&quot;Giovanni Vincenti&quot;,&quot;11&quot;:&quot;Johnson Denver&quot;,&quot;12&quot;:&quot;Ajay D Kshemlayanai&quot;,&quot;13&quot;:&quot;Mukesh Singhal&quot;,&quot;14&quot;:&quot;Emmett Dulaney&quot;,&quot;15&quot;:&quot;Ric Messier&quot;,&quot;16&quot;:&quot;Kevin Mitnik&quot;,&quot;17&quot;:&quot;James Kurose&quot;,&quot;18&quot;:&quot;Keith W Ross&quot;,&quot;19&quot;:&quot;Michael Sikorski&quot;,&quot;20&quot;:&quot;Andrew Honig&quot;,&quot;22&quot;:&quot;Kurian&quot;,&quot;23&quot;:&quot;Patrik&quot;,&quot;24&quot;:&quot;Nina Godbole&quot;,&quot;25&quot;:&quot;Bill Gates&quot;,&quot;26&quot;:&quot;Steven Holzner&quot;,&quot;27&quot;:&quot;Dan Heath&quot;,&quot;28&quot;:&quot;Paulo Coelho&quot;,&quot;29&quot;:&quot;Napoleon Hill&quot;,&quot;30&quot;:&quot;Morgan Housel&quot;,&quot;31&quot;:&quot;Daniel&quot;,&quot;32&quot;:&quot;Sudha Murty&quot;,&quot;33&quot;:&quot;Sudha Murthy&quot;,&quot;34&quot;:&quot;Jay Shetty&quot;,&quot;35&quot;:&quot;Harriet Raghunathan&quot;,&quot;36&quot;:&quot;Satischandra Chatterjee&quot;,&quot;37&quot;:&quot;NIthin Singhania&quot;,&quot;38&quot;:&quot;Dorling Kindersley&quot;,&quot;39&quot;:&quot;Dorling Kindersley Publishing Staff&quot;,&quot;40&quot;:&quot;Embark&quot;,&quot;41&quot;:&quot;Kumon&quot;,&quot;42&quot;:&quot;om&quot;},&quot;publisherData&quot;:{&quot;1&quot;:&quot;Rupa Publication&quot;,&quot;2&quot;:&quot;BPB Publications&quot;,&quot;4&quot;:&quot;Deven Publication&quot;,&quot;5&quot;:&quot;O'Reilly&quot;,&quot;6&quot;:&quot;Pearson&quot;,&quot;7&quot;:&quot;No Starch Press&quot;,&quot;8&quot;:&quot;Wiley&quot;,&quot;9&quot;:&quot;Allen Lane&quot;,&quot;10&quot;:&quot;Tata McGraw-Hill Education&quot;,&quot;11&quot;:&quot;Bantam Press&quot;,&quot;13&quot;:&quot;Puffin&quot;,&quot;14&quot;:&quot;--&quot;,&quot;15&quot;:&quot;Kumon Publishing North America&quot;,&quot;16&quot;:&quot;rowling&quot;},&quot;tagData&quot;:{&quot;2&quot;:&quot;Dinosours&quot;,&quot;5&quot;:&quot;Cyber Law&quot;,&quot;6&quot;:&quot;Computers&quot;,&quot;7&quot;:&quot;Linux Commands&quot;,&quot;8&quot;:&quot;Linux Books&quot;,&quot;9&quot;:&quot;Kali Linux&quot;,&quot;10&quot;:&quot;Hacking&quot;,&quot;11&quot;:&quot;Hackin&quot;,&quot;12&quot;:&quot;Malware&quot;,&quot;13&quot;:&quot;security system&quot;,&quot;14&quot;:&quot;History&quot;},&quot;page&quot;:1},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;a4d86194521ccfac2e39bb3b931f7faace7b96a22c3b969684e9327a11b597e0&quot;}}" class="w-100">
+            <div wire:loading.delay.1000ms class="cust_overlay"
+      wire:target="searchBookInfo" >
+    <div class="cv-spinner">
+        <span class="spinner"></span>
+    </div>
+</div>
+<style>
+    .cust_overlay {
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        display: none;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .cv-spinner {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px #ddd solid;
+        border-top: 4px #2e93e6 solid;
+        border-radius: 50% !important;
+        animation: sp-anime 0.8s infinite linear;
+    }
+    @keyframes  sp-anime {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+    <div class="card">
+        <div class="card-header">
+            <a href="https://www.library-management.com/books"
+               class="btn btn-sm btn-dark">Add New Book</a>
+        </div>
+        <div class="card-body">
+            <form method="post" action="http://localhost:8080/books/t" >
+                <input type="hidden" name="_token" value="RsB93VKHkHTB7CcvNPqQeixCN5Z08AHA2P315P4D">                <input type="hidden" value="" id="book_id">
+                <input type="hidden" value="create" id="mode">
+                <div class="row">
+                    
+                    <div class="col-md-9 col-12 mb-10">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="flash-message">
+                                                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row no-gutters">
+                            <div class="form-group col-md-6 col-12">
+                                <div class='input-group'><div class='input-group-prepend '><span class='input-group-text '>Book Name</span> </div>
+                                <input type="text" name="bn" class="form-control">
+                                </div>
+                                                                                            </div>
+                            <div class="form-group col-md-6 col-12">
+                                <div class='input-group'><div class='input-group-prepend '><span class='input-group-text '>ISBN<a data-toggle='tooltip' data-placement='top' title='Click to Open the link then Copy and Paste the isbn/asin. Note this can also get you product details of amazon using asin nos, so its not restricted to only books.'
+                                 target='_blank' class='pl-1' href='https://amzn.to/2QyuXPL'></a></span> </div>
+                                <input type="text" name="bc"
+                                       class="form-control">
+                                <div class="input-group-append">
+                                  
+                                </div>
+                                                                </div>
+                            </div>
+                            
+                                                                                            <div class="form-group col-md-6 col-12">
+                                                                                                <div class='input-group'><div class='input-group-prepend '><span class='input-group-text '>Author<a data-toggle='tooltip' data-placement='top' title='Click to Open the link then Copy and Paste the isbn/asin. Note this can also get you product details of amazon using asin nos, so its not restricted to only books.'
+                                                                                                 target='_blank' class='pl-1' href='https://amzn.to/2QyuXPL'></a></span> </div>
+                                                                                                <input type="text" name="aut"
+                                                                                                       class="form-control" type=date>
+                                                                                                <div class="input-group-append">
+                                                                                                  
+                                                                                                </div>
+                                                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group col-md-6 col-12">
+                                                                                                <div class='input-group'><div class='input-group-prepend '><span class='input-group-text '>Date of arrival</span> </div>
+                                                                                                <input type="date" name="doa" class="form-control">
+                                                                                                </div>
+                                                                                                                                                            </div>
+                                                                                
+                                                        <div class="form-group col-md-12 col-12">
+                                <div class='input-group'><div class='input-group-prepend '><span class='input-group-text '>Price<span class='text-danger ml-2'>*</span></span> </div>
+                                <input type="text" name="pr" class="form-control">
+                                                                </div>  
+                             
+                            </div>
+                            <div class="form-group col-md-6 col-12 author_holder p-1">
+                                <div class='input-group'><div class='input-group-prepend '><span class='input-group-text '>Rack No</span> </div>
+                                <input type="text" name="rn" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 col-12 publisher_holder p-1">
+                                <div class='input-group'><div class='input-group-prepend '><span class='input-group-text '>No of books</span> </div>
+                                <input type="text" name="nob" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-6 col-12 publisher_holder p-1">
+                                <div class='input-group'><div class='input-group-prepend '><span class='input-group-text '>Subject code</span> </div>
+                                <input type="text" name="sc" class="form-control">
+                                </div>
+                            </div>
+							 <div class="form-group col-md-6 col-12 publisher_holder p-1">
+                                <div class='input-group'><div class='input-group-prepend '><span class='input-group-text '>Tags</span> </div>
+                                <input type="text" name="tags" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group col-12">
+                                <div class='input-group'><div class='input-group-prepend '><span class='input-group-text '>Preview Url</span> </div>
+                                <input type="text" name="url" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-12 mb-10" style="background-color: #e9ecef;padding-top: 2%;">
+                                <div class="image_holder pb-3">
+                                    <div class="mt-2">
+                                        <div class='input-group'><div class='input-group-prepend '><span class='input-group-text '>Upload Cover Image</span> </div>
+                                        <input type="file" wire:model="custom_img" class="form-control text-xs"
+                                            name="image"   accept=".jpeg,.png,.jpg">
+                                                                        </div></div>
+                                </div>
+                            </div>
+
+                            
+                            
+                            
+
+                            <div class="card card-dark w-100">
+                                <div class="card-header">
+                                    <span
+                                        class="card-header-title">Add Books</span>
+                                                                        <div class="float-right">
+                                        
+                                                                            <input type="submit" value="Add"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>
+            </section>
+    </div>
+    <!-- /.content-wrapper -->
+
+
+
+<!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+
+</body>
+</html>
